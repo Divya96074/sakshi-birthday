@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Pacifico&display=swap');
+:root {
+  --lavender:#c7b3eb; --purple:#7c62ac; --deep:#5d477f; --yellow:#fff6b9;
+  --cream:#fffdf4; --pink:#f3cbdc; --ink:#58496d; --line:#e5d7f3;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; min-height:100vh; padding:24px 12px 18px; color:var(--ink);
+  font-family:'DM Sans',sans-serif;
+  background:repeating-linear-gradient(90deg,#fff8c6 0 17px,#fffef6 17px 34px);
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+}
+.page-decor{position:fixed; color:#b29bd9; opacity:.75; pointer-events:none; font-size:24px; letter-spacing:8px}
+.decor-top{top:9px;left:14px}
+.app{
+  width:min(100%,690px); min-height:690px; padding:18px 24px 22px; position:relative; overflow:hidden;
+  border:5px solid white; border-radius:27px; background:rgba(255,254,248,.96);
+  box-shadow:0 18px 55px #6c559b26;
+}
+.app:before,.app:after{content:"";position:absolute;width:125px;height:125px;background:var(--lavender);opacity:.65;z-index:0;pointer-events:none}
+.app:before{top:-84px;left:-45px;border-radius:0 0 100% 0}
+.app:after{bottom:-90px;right:-40px;border-radius:100% 0 0 0}
+.tiny-heading{position:relative;z-index:1;text-align:center;font-size:9px;font-weight:800;letter-spacing:3px;color:#a18bc8;margin-top:3px}
+.brand{position:relative;z-index:1;text-align:center;font-family:'Pacifico',cursive;color:var(--purple);font-size:20px;margin:3px 0 0}
+.brand span{color:#d88bb5}
+.screen{display:none;position:relative;z-index:1;min-height:590px;padding:25px 8px 10px;align-items:center;justify-content:center;flex-direction:column;text-align:center;animation:pop .35s ease}
+.screen.active{display:flex}
+@keyframes pop{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+h1{font-family:'Pacifico',cursive;font-weight:400;font-size:clamp(30px,6vw,47px);line-height:1.35;color:var(--purple);margin:4px 0 12px}
+h1 span{color:#c47fa8}
+h2{font-family:'Pacifico',cursive;font-size:29px;font-weight:400;color:var(--purple);margin:5px 0 10px}
+.sub{font-size:13px;line-height:1.7;color:#8d7e9f;margin:4px 0 18px}
+.doodle{font-size:72px;filter:drop-shadow(0 5px 0 #f4d7e6);margin-bottom:8px}
+.pin-card{width:min(100%,355px);padding:25px 25px 18px;background:#fffdf8;border:2px solid var(--line);border-radius:24px;box-shadow:0 7px 0 #eee4f8;position:relative}
+.sticker{position:absolute;right:-12px;top:-15px;width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:var(--pink);color:#a35e8a;font-size:25px;border:3px solid white;transform:rotate(12deg)}
+.pin-card h1{font-size:28px;margin:0}
+.pin-label{font-size:11px;color:#a093b2;margin:18px 0 8px}
+.pin-dots{font-size:23px;letter-spacing:5px;color:#a18bc8;min-height:32px;margin-bottom:10px}
+.keypad{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;width:100%;max-width:240px;margin:0 auto}
+.keypad button{border:1px solid #e6dcf3;background:#f8f3ff;color:var(--deep);border-radius:12px;height:43px;font:700 15px 'DM Sans',sans-serif;cursor:pointer;box-shadow:0 3px 0 #e9def6;transition:.15s}
+.keypad button:hover{background:#eee4ff;transform:translateY(-1px)}
+.keypad .key-special{background:#fff6c5;border-color:#f0e7a8}
+.feedback{font-size:11px;min-height:17px;color:#b17ea1;margin:12px 0 0}
+.bottom-note{font-size:10px;letter-spacing:1px;color:#a597b8;margin-top:17px}
+.welcome-ribbon{background:#fff2a5;color:#8a70ad;padding:8px 17px;border-radius:50px;font-size:10px;font-weight:800;letter-spacing:2px;margin-bottom:17px;transform:rotate(-2deg)}
+.menu-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px;width:min(100%,440px);margin:10px auto 18px}
+.menu-item{background:#fffefb;border:2px solid var(--line);border-radius:18px;min-height:142px;padding:13px 8px;display:flex;align-items:center;justify-content:center;flex-direction:column;cursor:pointer;color:var(--deep);box-shadow:0 5px 0 #eee5f6;transition:transform .2s,background .2s}
+.menu-item:hover{transform:translateY(-4px) rotate(-1deg);background:#fffaff}
+.item-art{display:grid;place-items:center;font-size:39px;height:58px;width:65px;margin-bottom:7px;border-radius:18px}
+.camera{background:#f9d9e8}.envelope{background:#e8ddfb}.cassette{background:#fff1a9}.gift{background:#dff0dc}
+.menu-item b{font-size:12px}.menu-item small{font-size:10px;color:#a396b3;margin-top:4px}
+.main-button,.alt-button{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;border:0;border-radius:50px;padding:12px 21px;font:700 12px 'DM Sans',sans-serif;cursor:pointer;transition:transform .2s,box-shadow .2s;margin:5px}
+.main-button{background:var(--purple);color:white;box-shadow:0 4px 0 #604a91}
+.main-button:hover,.alt-button:hover{transform:translateY(-2px)}
+.main-button:active{transform:translateY(2px);box-shadow:none}
+.alt-button{background:#fff1c4;color:var(--deep);border:1px solid #f0e4a8}
+.menu-paw{position:absolute;bottom:3px;left:13px;font-size:21px;opacity:.65}
+.eyebrow{font-size:10px;letter-spacing:2.5px;font-weight:800;color:#a38acb;text-transform:uppercase;margin:5px 0 10px}
+.big-dog{font-size:80px}
+.question-heading{font-size:clamp(27px,5.5vw,40px)}
+.answer-row{display:flex;justify-content:center;flex-wrap:wrap;margin-top:12px}
+.text-button{background:none;border:0;color:#a28ac5;text-decoration:underline;cursor:pointer;font:600 11px 'DM Sans',sans-serif;margin-top:17px}
+.confetti-icon{font-size:30px;margin-bottom:12px;animation:float 2s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-7px) rotate(3deg)}}
+.ending-copy{max-width:420px;font-size:14px;line-height:1.9;color:#837391}
+.cake{font-size:78px;margin:7px}
+.script{font-family:'Pacifico',cursive;color:#c47fa8;font-size:20px}
+footer{text-align:center;color:#9b88bd;font-size:10px;letter-spacing:1px;padding-top:15px}
+.modal{display:none;position:fixed;inset:0;z-index:20;background:#3c2d536e;align-items:center;justify-content:center;padding:14px}
+.modal.open{display:flex;animation:pop .2s ease}
+.modal-box{position:relative;width:min(100%,480px);max-height:91vh;overflow:auto;padding:28px 22px 23px;background:#fffdf7;border:4px solid white;outline:2px solid var(--line);border-radius:24px;text-align:center;box-shadow:0 20px 65px #30204440}
+.modal-box.wide{width:min(100%,650px)}
+.close{position:absolute;right:10px;top:9px;width:31px;height:31px;border:0;border-radius:50%;background:#eee5fc;color:var(--deep);font-size:24px;cursor:pointer;line-height:1}
+.modal-intro{font-size:12px;color:#9584a5;line-height:1.7}
+.memory-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px;margin-top:18px}
+.memory-grid figure{margin:0;background:white;padding:6px 6px 10px;border:1px solid #e8dff1;box-shadow:0 3px 8px #77618b13;transform:rotate(-1deg)}
+.memory-grid figure:nth-child(even){transform:rotate(1.5deg)}
+.memory-grid img{width:100%;height:145px;object-fit:cover;display:block;border-radius:5px}
+.memory-grid figcaption{font-family:'Pacifico',cursive;font-size:11px;color:#9b78ad;padding-top:8px}
+.modal-footnote{font-size:10px;color:#a498b4;line-height:1.6;margin-top:16px}
+.letter-box{background:repeating-linear-gradient(0deg,#fffdf7 0 30px,#f2eafa 30px 31px)}
+.flower-stamp{position:absolute;right:23px;top:30px;font-size:38px;color:#d3a5c9}
+.letter-copy{text-align:left;font-size:13px;line-height:1.9;color:#65566e;margin-top:15px}
+.letter-sign{text-align:right;color:#a176a6;font-family:'Pacifico',cursive}
+.cassette-large{font-size:66px;margin-bottom:4px}
+.music-note{font-size:12px;line-height:1.8;color:#887995}
+.song-link{margin:12px auto}
+audio{display:block;width:100%;margin:14px 0}
+code{font-size:11px;background:#f0e7f8;padding:2px 4px;border-radius:4px}
+.secret-heart{font-size:58px;margin-bottom:10px}
+.secret-message{font-size:14px;line-height:1.9;color:#796a87;background:#fff7d0;border:1px dashed #e9dca1;border-radius:14px;padding:16px}
+.hidden{display:none}
+@media(max-width:500px){
+ body{padding:16px 8px}
+ .app{padding:16px 13px 18px;min-height:0}
+ .screen{min-height:590px;padding:20px 3px 12px}
+ .pin-card{padding:23px 16px 17px}
+ .memory-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .memory-grid img{height:155px}
+ .menu-grid{gap:10px}
+ .menu-item{min-height:130px}
+}

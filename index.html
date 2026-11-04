@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fff7c7">
+  <title>For Sexyy Sakshi ♡</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page-decor decor-top">✿　🍔　🌷　✿</div>
+  <main class="app">
+    <div class="tiny-heading">A VERY IMPORTANT WEBSITE FOR</div>
+    <div class="brand">Sexyyyyyy Saksiiiii <span>♡</span></div>
+
+    <!-- PIN SCREEN -->
+    <section class="screen active" id="pin-screen">
+      <div class="doodle dog">🌷</div>
+      <div class="pin-card">
+        <div class="sticker">♡</div>
+        <h1>Hey, birthday girl!</h1>
+        <p class="sub">This little website is only for you.</p>
+        <p class="pin-label">Enter the secret PIN to continue</p>
+        <div class="pin-dots" id="pin-dots" aria-label="PIN input">○　○　○　○</div>
+        <div class="keypad" id="keypad">
+          <button data-digit="1">1</button><button data-digit="2">2</button><button data-digit="3">3</button>
+          <button data-digit="4">4</button><button data-digit="5">5</button><button data-digit="6">6</button>
+          <button data-digit="7">7</button><button data-digit="8">8</button><button data-digit="9">9</button>
+          <button class="key-special" data-action="clear">⌫</button><button data-digit="0">0</button><button class="key-special" data-action="enter">♡</button>
+        </div>
+        <p id="pin-feedback" class="feedback">Hint: your special day 💌</p>
+      </div>
+      <p class="bottom-note">made with love, backpain & a little chaos</p>
+    </section>
+
+    <!-- MENU SCREEN -->
+    <section class="screen" id="menu-screen">
+      <div class="welcome-ribbon">YOU'RE IN!! ✨</div>
+      <h1>Happy Birthday,<br><span>Sexyy Saksiii!</span></h1>
+      <p class="sub">Pick a little surprise, birthday girl.</p>
+      <div class="menu-grid">
+        <button class="menu-item" data-open="memories-modal"><span class="item-art camera">📸</span><b>Our memories</b><small>the camera roll</small></button>
+        <button class="menu-item" data-open="letter-modal"><span class="item-art envelope">💌</span><b>Open this letter</b><small>something from me</small></button>
+        <button class="menu-item" data-open="music-modal"><span class="item-art cassette">📼</span><b>Our song</b><small>press play ♫</small></button>
+        <button class="menu-item" data-open="secret-modal"><span class="item-art gift">🎁</span><b>Secret message</b><small>shhh… it's a secret</small></button>
+      </div>
+      <button class="main-button" id="to-question">one last thing →</button>
+      <div class="menu-paw">🐾</div>
+    </section>
+
+    <!-- FINAL QUESTION -->
+    <section class="screen" id="question-screen">
+      <div class="doodle big-dog">🐶🌷</div>
+      <p class="eyebrow">WAIT, WAIT…</p>
+      <h1 class="question-heading">Do you know how<br>much you mean to me?</h1>
+      <p class="sub">Choose your answer carefully, Sexyy Sakshi 👀</p>
+      <div class="answer-row">
+        <button class="main-button" id="yes-button">YES, OBVIOUSLY ♡</button>
+        <button class="alt-button" id="no-button">no?</button>
+      </div>
+      <p class="feedback" id="answer-feedback">There is only one correct answer hehe.</p>
+      <button class="text-button" data-back="menu-screen">← back to surprises</button>
+    </section>
+
+    <!-- END SCREEN -->
+    <section class="screen" id="ending-screen">
+      <div class="confetti-icon">💗 ✨ 💛</div>
+      <h1>Happiest Birthday!</h1>
+      <p class="ending-copy">Sakshi, you're one of those people who make life funnier, warmer, and so much more memorable. I hope this year gives you a hundred reasons to smile, Munch, Dosa, Burger and  all the love you deserve.</p>
+      <div class="cake">🎂</div>
+      <p class="script">Te Amo, Sexyy Saksii ♡</p>
+      <button class="main-button" id="replay-button">start again ↻</button>
+    </section>
+  </main>
+
+  <footer>🌷 made especially for Sakshi ✿</footer>
+
+  <!-- MEMORIES MODAL -->
+  <div class="modal" id="memories-modal" role="dialog" aria-modal="true">
+    <div class="modal-box wide">
+      <button class="close" aria-label="Close">×</button>
+      <p class="eyebrow">little moments, big memories</p>
+      <h2>Our memory box 📸</h2>
+      <p class="modal-intro">Proof that we're cute and a little bit chaotic.</p>
+      <div class="memory-grid">
+        <figure><img src="assets/photos/sakshi-glasses.jpeg" alt="Sakshi wearing blue sunglasses"><figcaption>miss main character 💅</figcaption></figure>
+        <figure><img src="assets/photos/sleepy-memory.jpeg" alt="A cozy sleepy memory"><figcaption>caught in 4K 😭</figcaption></figure>
+        <figure><img src="assets/photos/bestie-selfie.jpeg" alt="A selfie together"><figcaption>us being us ♡</figcaption></figure>
+        <figure><img src="assets/photos/red-sweater.jpeg" alt="Sakshi smiling in a red sweater"><figcaption>birthday girl energy ✨</figcaption></figure>
+        <figure><img src="assets/photos/smile-closeup.jpeg" alt="A close-up smile"><figcaption>that smile, though 💗</figcaption></figure>
+      </div>
+      <p class="modal-footnote">Add more pictures by placing them in assets/photos and editing this gallery in index.html.</p>
+    </div>
+  </div>
+
+  <!-- LETTER MODAL -->
+  <div class="modal" id="letter-modal" role="dialog" aria-modal="true">
+    <div class="modal-box letter-box">
+      <button class="close" aria-label="Close">×</button>
+      <div class="flower-stamp">✿</div>
+      <p class="eyebrow">please read this, madam</p>
+      <h2>Dear Sakshi,</h2>
+      <div class="letter-copy">
+        <p>Happiest birthday Sriidaa 🌷 💗</p>
+        <p>I hope you know how genuinely special you are. Thank you for all the random moments, the laughs that make absolutely no sense, and the memories that become funnier every time we remember them.</p>
+        <p>I hope this year is gentle with you. I hope you get new reasons to be proud of yourself, people who make you feel safe, and all the happiness you give to everyone around you.</p>
+        <p>Never forget that you deserve the good things — the big dreams, the soft days, the ugly-laugh moments, and the kind of love that never makes you question your worth.</p>
+        <p>Stay iconic, stay a little dramatic, and please never stop being your wonderful self.</p>
+        <p class="letter-sign">Love you loads,<br><strong>your partner in food ♡</strong></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- MUSIC MODAL -->
+  <div class="modal" id="music-modal" role="dialog" aria-modal="true">
+    <div class="modal-box music-box">
+      <button class="close" aria-label="Close">×</button>
+      <div class="cassette-large">📼</div>
+      <p class="eyebrow">this one's for you</p>
+      <h2>Te Amo 🎶</h2>
+      <p class="modal-intro">your birthday soundtrack ♡</p>
+      <p class="music-note">Press the button to find the song. For playback inside this page, add a music file you are allowed to use as <code>song.mp3</code> in <code>assets/music/</code>.</p>
+      <a class="main-button song-link" href="https://www.youtube.com/results?search_query=Te+Amo+official+song" target="_blank" rel="noopener">Find “Te Amo” on YouTube ↗</a>
+      <audio controls loop>
+        <source src="assets/music/song.mp3" type="audio/mpeg">
+        Your browser does not support audio.
+      </audio>
+      <p class="modal-footnote">Browsers usually require a click before audio plays. Music is not set to autoplay.</p>
+    </div>
+  </div>
+
+  <!-- SECRET MODAL -->
+  <div class="modal" id="secret-modal" role="dialog" aria-modal="true">
+    <div class="modal-box secret-box">
+      <button class="close" aria-label="Close">×</button>
+      <div class="secret-heart">💌</div>
+      <p class="eyebrow">top secret. don't tell anyone.</p>
+      <h2>One thing you should know…</h2>
+      <p class="secret-message">You're loved more than you realise, Sakshi. On your best days, your worst days, and all the weird days in between. And yes, Sexyy Sakshi is a full-time personality. ♡</p>
+      <button class="main-button" id="another-secret">reveal another secret ✨</button>
+      <p class="secret-message hidden" id="secret-two">Secret no. 2: Te Amo Sexxy Sakshi. That's it. That's the message. 😌💗</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
